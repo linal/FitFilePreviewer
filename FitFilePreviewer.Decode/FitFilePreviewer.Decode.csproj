@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E2CFCC0-FE2E-479A-92B5-993480DF7904}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FitFilePreviewer.Decode</RootNamespace>
+    <AssemblyName>FitFilePreviewer.Decode</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>StrongKeyName.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Decoder.cs" />
+    <Compile Include="Dto\ActivitySummary.cs" />
+    <Compile Include="Fit\Crc.cs" />
+    <Compile Include="Fit\Decode.cs" />
+    <Compile Include="Fit\Defines.cs" />
+    <Compile Include="Fit\Encode.cs" />
+    <Compile Include="Fit\Field.cs" />
+    <Compile Include="Fit\FieldComponent.cs" />
+    <Compile Include="Fit\FieldDefinition.cs" />
+    <Compile Include="Fit\FitException.cs" />
+    <Compile Include="Fit\Header.cs" />
+    <Compile Include="Fit\Mesg.cs" />
+    <Compile Include="Fit\MesgBroadcaster.cs" />
+    <Compile Include="Fit\MesgDefinition.cs" />
+    <Compile Include="Fit\Profile.cs" />
+    <Compile Include="Fit\Mesgs\ActivityMesg.cs" />
+    <Compile Include="Fit\Mesgs\BikeProfileMesg.cs" />
+    <Compile Include="Fit\Mesgs\BloodPressureMesg.cs" />
+    <Compile Include="Fit\Mesgs\CadenceZoneMesg.cs" />
+    <Compile Include="Fit\Mesgs\CapabilitiesMesg.cs" />
+    <Compile Include="Fit\Mesgs\CourseMesg.cs" />
+    <Compile Include="Fit\Mesgs\CoursePointMesg.cs" />
+    <Compile Include="Fit\Mesgs\DeviceInfoMesg.cs" />
+    <Compile Include="Fit\Mesgs\DeviceSettingsMesg.cs" />
+    <Compile Include="Fit\Mesgs\EventMesg.cs" />
+    <Compile Include="Fit\Mesgs\FieldCapabilitiesMesg.cs" />
+    <Compile Include="Fit\Mesgs\FileCapabilitiesMesg.cs" />
+    <Compile Include="Fit\Mesgs\FileCreatorMesg.cs" />
+    <Compile Include="Fit\Mesgs\FileIdMesg.cs" />
+    <Compile Include="Fit\Mesgs\GoalMesg.cs" />
+    <Compile Include="Fit\Mesgs\HrmProfileMesg.cs" />
+    <Compile Include="Fit\Mesgs\HrvMesg.cs" />
+    <Compile Include="Fit\Mesgs\HrZoneMesg.cs" />
+    <Compile Include="Fit\Mesgs\LapMesg.cs" />
+    <Compile Include="Fit\Mesgs\LengthMesg.cs" />
+    <Compile Include="Fit\Mesgs\MemoGlobMesg.cs" />
+    <Compile Include="Fit\Mesgs\MesgCapabilitiesMesg.cs" />
+    <Compile Include="Fit\Mesgs\MetZoneMesg.cs" />
+    <Compile Include="Fit\Mesgs\MonitoringInfoMesg.cs" />
+    <Compile Include="Fit\Mesgs\MonitoringMesg.cs" />
+    <Compile Include="Fit\Mesgs\PadMesg.cs" />
+    <Compile Include="Fit\Mesgs\PowerZoneMesg.cs" />
+    <Compile Include="Fit\Mesgs\RecordMesg.cs" />
+    <Compile Include="Fit\Mesgs\ScheduleMesg.cs" />
+    <Compile Include="Fit\Mesgs\SdmProfileMesg.cs" />
+    <Compile Include="Fit\Mesgs\SessionMesg.cs" />
+    <Compile Include="Fit\Mesgs\SlaveDeviceMesg.cs" />
+    <Compile Include="Fit\Mesgs\SoftwareMesg.cs" />
+    <Compile Include="Fit\Mesgs\SpeedZoneMesg.cs" />
+    <Compile Include="Fit\Mesgs\SportMesg.cs" />
+    <Compile Include="Fit\Mesgs\TotalsMesg.cs" />
+    <Compile Include="Fit\Mesgs\TrainingFileMesg.cs" />
+    <Compile Include="Fit\Mesgs\UserProfileMesg.cs" />
+    <Compile Include="Fit\Mesgs\WeightScaleMesg.cs" />
+    <Compile Include="Fit\Mesgs\WorkoutMesg.cs" />
+    <Compile Include="Fit\Mesgs\WorkoutStepMesg.cs" />
+    <Compile Include="Fit\Mesgs\ZonesTargetMesg.cs" />
+    <Compile Include="Fit\Types\Activity.cs" />
+    <Compile Include="Fit\Types\ActivityClass.cs" />
+    <Compile Include="Fit\Types\ActivityLevel.cs" />
+    <Compile Include="Fit\Types\ActivitySubtype.cs" />
+    <Compile Include="Fit\Types\ActivityType.cs" />
+    <Compile Include="Fit\Types\AntNetwork.cs" />
+    <Compile Include="Fit\Types\AntplusDeviceType.cs" />
+    <Compile Include="Fit\Types\AutolapTrigger.cs" />
+    <Compile Include="Fit\Types\BatteryStatus.cs" />
+    <Compile Include="Fit\Types\BodyLocation.cs" />
+    <Compile Include="Fit\Types\Bool.cs" />
+    <Compile Include="Fit\Types\BpStatus.cs" />
+    <Compile Include="Fit\Types\Checksum.cs" />
+    <Compile Include="Fit\Types\ConnectivityCapabilities.cs" />
+    <Compile Include="Fit\Types\CourseCapabilities.cs" />
+    <Compile Include="Fit\Types\CoursePoint.cs" />
+    <Compile Include="Fit\Types\DateTime.cs" />
+    <Compile Include="Fit\Types\DeviceIndex.cs" />
+    <Compile Include="Fit\Types\DisplayHeart.cs" />
+    <Compile Include="Fit\Types\DisplayMeasure.cs" />
+    <Compile Include="Fit\Types\DisplayPosition.cs" />
+    <Compile Include="Fit\Types\DisplayPower.cs" />
+    <Compile Include="Fit\Types\Event.cs" />
+    <Compile Include="Fit\Types\EventType.cs" />
+    <Compile Include="Fit\Types\File.cs" />
+    <Compile Include="Fit\Types\FileFlags.cs" />
+    <Compile Include="Fit\Types\FitnessEquipmentState.cs" />
+    <Compile Include="Fit\Types\GarminProduct.cs" />
+    <Compile Include="Fit\Types\Gender.cs" />
+    <Compile Include="Fit\Types\Goal.cs" />
+    <Compile Include="Fit\Types\GoalRecurrence.cs" />
+    <Compile Include="Fit\Types\HrType.cs" />
+    <Compile Include="Fit\Types\HrZoneCalc.cs" />
+    <Compile Include="Fit\Types\Intensity.cs" />
+    <Compile Include="Fit\Types\Language.cs" />
+    <Compile Include="Fit\Types\LapTrigger.cs" />
+    <Compile Include="Fit\Types\LeftRightBalance.cs" />
+    <Compile Include="Fit\Types\LeftRightBalance100.cs" />
+    <Compile Include="Fit\Types\LengthType.cs" />
+    <Compile Include="Fit\Types\LocalDateTime.cs" />
+    <Compile Include="Fit\Types\Manufacturer.cs" />
+    <Compile Include="Fit\Types\MesgCount.cs" />
+    <Compile Include="Fit\Types\MesgNum.cs" />
+    <Compile Include="Fit\Types\MessageIndex.cs" />
+    <Compile Include="Fit\Types\PwrZoneCalc.cs" />
+    <Compile Include="Fit\Types\Schedule.cs" />
+    <Compile Include="Fit\Types\SessionTrigger.cs" />
+    <Compile Include="Fit\Types\SourceType.cs" />
+    <Compile Include="Fit\Types\Sport.cs" />
+    <Compile Include="Fit\Types\SportBits0.cs" />
+    <Compile Include="Fit\Types\SportBits1.cs" />
+    <Compile Include="Fit\Types\SportBits2.cs" />
+    <Compile Include="Fit\Types\StrokeType.cs" />
+    <Compile Include="Fit\Types\SubSport.cs" />
+    <Compile Include="Fit\Types\SwimStroke.cs" />
+    <Compile Include="Fit\Types\TimerTrigger.cs" />
+    <Compile Include="Fit\Types\TimeZone.cs" />
+    <Compile Include="Fit\Types\UserLocalId.cs" />
+    <Compile Include="Fit\Types\Weight.cs" />
+    <Compile Include="Fit\Types\WktStepDuration.cs" />
+    <Compile Include="Fit\Types\WktStepTarget.cs" />
+    <Compile Include="Fit\Types\WorkoutCapabilities.cs" />
+    <Compile Include="Fit\Types\WorkoutHr.cs" />
+    <Compile Include="Fit\Types\WorkoutPower.cs" />
+    <Compile Include="Fit\Subfield.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\EndianBinaryReader.cs" />
+    <Compile Include="Utility\EndianBinaryWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fit\Profile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StrongKeyName.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
